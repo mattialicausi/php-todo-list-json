@@ -8,7 +8,7 @@ const app = createApp({
     },
     methods: {
         getTask(){
-            axios.get('server.php').then((res) => {
+            axios.get('./server.php').then((res) => {
                 console.log(res.data);
                 const tasks = JSON.parse(res.data);
                 this.taskList = tasks;
